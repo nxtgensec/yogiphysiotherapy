@@ -30,7 +30,7 @@ export function Conditions() {
             return (
               <a
                 key={k}
-                href={buildWhatsAppLink(label)}
+                href={buildWhatsAppLink(label, `I'm experiencing ${label.toLowerCase()} and would like guidance.`)}
                 target="_blank"
                 rel="noopener"
                 className="group relative flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-4 text-center shadow-soft transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-elevated"
