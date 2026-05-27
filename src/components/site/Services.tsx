@@ -66,7 +66,7 @@ export function Services() {
                   <h3 className="font-display text-xl font-semibold tracking-tight">{s.name}</h3>
                   <p className="flex-1 text-sm text-muted-foreground">{s.desc}</p>
                   <a
-                    href={buildWhatsAppLink(s.name)}
+                    href={buildWhatsAppLink(s.name, `I'm looking for ${s.name.toLowerCase()} — ${s.desc}`)}
                     target="_blank"
                     rel="noopener"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
