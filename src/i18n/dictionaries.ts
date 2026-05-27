@@ -141,6 +141,33 @@ export const dictionaries = {
       contact: "Contact",
       rights: "All rights reserved.",
     },
+    aboutClinic: {
+      eyebrow: "About the clinic",
+      title: "Tirupati's premium recovery & pain-relief clinic",
+      body: "Yogi Physiotherapy Pain Relief & Obesity Clinic is a modern recovery center in Tirupati combining hands-on manual therapy, advanced electrotherapy and personalized obesity care. Our mission is simple — get you back to life, pain-free.",
+      stats: [
+        { v: "10+", l: "Years of clinical care" },
+        { v: "5,000+", l: "Patients recovered" },
+        { v: "30+", l: "Conditions treated" },
+        { v: "4.9★", l: "Patient rating" },
+      ],
+    },
+    machinery: {
+      eyebrow: "Equipment",
+      title: "Modern machinery we use to treat patients",
+      subtitle: "Hospital-grade physiotherapy equipment for faster, safer recovery.",
+      items: [
+        { t: "Ultrasound Therapy", d: "Deep-tissue healing for muscle and joint pain." },
+        { t: "TENS / IFT Stimulator", d: "Electrical nerve stimulation for chronic pain relief." },
+        { t: "Shortwave Diathermy", d: "Deep heat therapy for stiffness and inflammation." },
+        { t: "Laser Therapy", d: "Cold laser to accelerate tissue recovery." },
+        { t: "Cervical & Lumbar Traction", d: "Decompression therapy for neck and back pain." },
+        { t: "Wax Bath Therapy", d: "Soothing heat for arthritis and joint stiffness." },
+        { t: "CPM Machine", d: "Continuous passive motion for post-surgery rehab." },
+        { t: "Body Composition Analyzer", d: "Tracks fat, muscle & water for obesity care." },
+      ],
+    },
+    mobileNav: { home: "Home", services: "Services", book: "Book", call: "Call", more: "Menu" },
     lang: { en: "English", te: "తెలుగు" },
   },
   te: {
