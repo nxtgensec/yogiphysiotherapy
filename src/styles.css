@@ -235,18 +235,6 @@
     animation: float-slow 8s ease-in-out infinite;
   }
 
-  @keyframes pulse-ring {
-    0% {
-      box-shadow: 0 0 0 0 color-mix(in oklab, var(--whatsapp) 60%, transparent);
-    }
-    100% {
-      box-shadow: 0 0 0 22px color-mix(in oklab, var(--whatsapp) 0%, transparent);
-    }
-  }
-  .animate-pulse-ring {
-    animation: pulse-ring 1.8s cubic-bezier(0.66, 0, 0, 1) infinite;
-  }
-
   @keyframes marquee-ltr {
     from {
       transform: translateX(-50%);

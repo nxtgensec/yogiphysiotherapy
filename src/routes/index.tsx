@@ -13,7 +13,6 @@ import { Gallery } from "@/components/site/Gallery";
 import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
-import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { MobileBottomNav } from "@/components/site/MobileBottomNav";
 import { CLINIC } from "@/lib/clinic";
 
@@ -170,7 +169,6 @@ function Home() {
         <Contact />
       </main>
       <Footer />
-      <FloatingWhatsApp />
       <MobileBottomNav />
     </div>
   );

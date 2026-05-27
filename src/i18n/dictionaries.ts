@@ -256,7 +256,6 @@
       message: "How can we help?",
       send: "Open in WhatsApp",
     },
-    floating: { label: "Chat on WhatsApp" },
     footer: {
       tagline: "Premium physiotherapy and recovery care in Tirupati.",
       quickLinks: "Quick links",
@@ -300,7 +299,13 @@
         { t: "Treatment Table", d: "Stable, comfortable setup for manual therapy and modalities." },
       ],
     },
-    mobileNav: { home: "Home", services: "Services", book: "Book", call: "Call", more: "Menu" },
+    mobileNav: {
+      home: "Home",
+      about: "About",
+      chat: "Chat",
+      services: "Services",
+      equipment: "Equipment",
+    },
     lang: { en: "English", te: "తెలుగు" },
   },
   te: {
@@ -535,7 +540,6 @@
       message: "మేము ఎలా సహాయపడగలము?",
       send: "WhatsApp లో తెరవండి",
     },
-    floating: { label: "WhatsApp లో చాట్ చేయండి" },
     footer: {
       tagline: "తిరుపతిలో ప్రీమియం ఫిజియోథెరపీ మరియు రికవరీ సంరక్షణ.",
       quickLinks: "త్వరిత లింకులు",
@@ -573,7 +577,13 @@
         { t: "ట్రీట్మెంట్ టేబుల్", d: "మాన్యువల్ థెరపీ మరియు చికిత్సల కోసం సౌకర్యవంతమైన సెటప్." },
       ],
     },
-    mobileNav: { home: "హోమ్", services: "సేవలు", book: "బుక్", call: "కాల్", more: "మెనూ" },
+    mobileNav: {
+      home: "హోమ్",
+      about: "గురించి",
+      chat: "చాట్",
+      services: "సేవలు",
+      equipment: "పరికరాలు",
+    },
     lang: { en: "English", te: "తెలుగు" },
   },
 } as const;
