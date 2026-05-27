@@ -1,4 +1,4 @@
-export const CLINIC = {
+﻿export const CLINIC = {
   name: "Yogi Physiotherapy Pain Relief & Obesity Clinic",
   shortName: "Yogi Physiotherapy",
   city: "Tirupati",
@@ -18,13 +18,8 @@ export const CLINIC = {
     line: "Tirupati, Andhra Pradesh, India",
   },
   hours: {
-    weekdays: "Mon – Sat: 8:00 AM – 9:00 PM",
+    weekdays: "Mon  to  Sat: 8:00 AM  to  9:00 PM",
     sunday: "Sunday: By Appointment",
-  },
-  social: {
-    facebook: "#",
-    instagram: "#",
-    youtube: "#",
   },
 };
 
@@ -36,7 +31,7 @@ export function buildWhatsAppLink(condition?: string, painNote?: string) {
       ? `I am looking for help with: *${condition}*.`
       : `I would like to book a physiotherapy consultation.`,
     painNote ? `My concern: ${painNote}` : `Please share available timings and next steps.`,
-    `— Sent from yogiphysiotherapy.com`,
+    `  Sent from yogiphysiotherapy.com`,
   ];
   return `${base}?text=${encodeURIComponent(lines.join("\n"))}`;
 }

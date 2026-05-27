@@ -25,7 +25,9 @@ export function AboutClinic() {
                   key={s.l}
                   className="rounded-2xl border border-border bg-card p-4 text-center shadow-soft"
                 >
-                  <dt className="font-display text-2xl font-semibold text-primary sm:text-3xl">{s.v}</dt>
+                  <dt className="font-display text-2xl font-semibold text-primary sm:text-3xl">
+                    {s.v}
+                  </dt>
                   <dd className="mt-1 text-xs text-muted-foreground">{s.l}</dd>
                 </div>
               ))}
@@ -34,7 +36,15 @@ export function AboutClinic() {
 
           <div className="lg:col-span-5">
             <div className="relative mx-auto flex max-w-sm flex-col items-center gap-4 rounded-3xl border border-border bg-gradient-healing p-8 text-center shadow-elevated">
-              <img src={logo} alt={CLINIC.name} className="h-20 w-20 rounded-2xl object-cover shadow-soft" />
+              <img
+                src={logo}
+                alt={CLINIC.name}
+                className="h-20 w-20 rounded-2xl object-cover shadow-soft"
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
+              />
               <p className="font-display text-xl font-semibold leading-tight text-foreground">
                 {CLINIC.name}
               </p>
@@ -43,7 +53,8 @@ export function AboutClinic() {
               </p>
               <p className="text-xs text-muted-foreground">
                 {CLINIC.doctor.name} · {CLINIC.doctor.credentials}
-                <br />Reg No: {CLINIC.doctor.regNo}
+                <br />
+                Reg No: {CLINIC.doctor.regNo}
               </p>
             </div>
           </div>

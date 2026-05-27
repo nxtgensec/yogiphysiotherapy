@@ -8,7 +8,13 @@ export function MobileBottomNav() {
   const items = [
     { href: "/#top", icon: Home, label: t.mobileNav.home, external: false },
     { href: "/#services", icon: Stethoscope, label: t.mobileNav.services, external: false },
-    { href: buildWhatsAppLink(), icon: MessageCircle, label: t.mobileNav.book, external: true, primary: true },
+    {
+      href: buildWhatsAppLink(),
+      icon: MessageCircle,
+      label: t.mobileNav.book,
+      external: true,
+      primary: true,
+    },
     { href: buildCallLink(), icon: Phone, label: t.mobileNav.call, external: false },
     { href: "/#faq", icon: HelpCircle, label: t.mobileNav.more, external: false },
   ];
@@ -27,7 +33,7 @@ export function MobileBottomNav() {
                 <a
                   href={it.href}
                   target={it.external ? "_blank" : undefined}
-                  rel={it.external ? "noopener" : undefined}
+                  rel={it.external ? "noopener noreferrer" : undefined}
                   className="flex size-14 flex-col items-center justify-center gap-0.5 rounded-full bg-[color:var(--whatsapp)] text-white shadow-elevated ring-4 ring-background"
                   aria-label={it.label}
                 >
@@ -41,7 +47,7 @@ export function MobileBottomNav() {
               <a
                 href={it.href}
                 target={it.external ? "_blank" : undefined}
-                rel={it.external ? "noopener" : undefined}
+                rel={it.external ? "noopener noreferrer" : undefined}
                 className="flex flex-1 flex-col items-center gap-1 px-1 py-2.5 text-[11px] font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 <Icon className="size-5" />

@@ -9,8 +9,15 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logo from "@/assets/logo.png";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { CLINIC } from "@/lib/clinic";
+
+const SITE_URL = "https://yogiphysiotherapy.com";
+const DEFAULT_DESCRIPTION =
+  "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati provides expert physiotherapy, back pain treatment, knee pain care, sports injury rehab, paralysis rehabilitation, home visit physiotherapy and obesity management.";
+const SEO_KEYWORDS =
+  "best physiotherapy clinic in Tirupati, physiotherapy Tirupati, best physiotherapist in Tirupati, back pain treatment Tirupati, knee pain treatment Tirupati, neck pain physiotherapy Tirupati, sports injury physiotherapy Tirupati, paralysis rehabilitation Tirupati, home visit physiotherapy Tirupati, obesity clinic Tirupati";
 
 function NotFoundComponent() {
   return (
@@ -48,12 +55,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
           >
             Try again
           </button>
-          <a href="/" className="inline-flex items-center justify-center rounded-full border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground hover:bg-secondary">
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-full border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground hover:bg-secondary"
+          >
             Go home
           </a>
         </div>
@@ -71,17 +84,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: CLINIC.name },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Yogi Physiotherapy" },
-      { property: "og:title", content: "Yogi Physiotherapy" },
-      { name: "twitter:title", content: "Yogi Physiotherapy" },
-      { name: "description", content: "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati offers expert physiotherapy, pain relief, rehabilitation, and obesity management treatments with per" },
-      { property: "og:description", content: "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati offers expert physiotherapy, pain relief, rehabilitation, and obesity management treatments with per" },
-      { name: "twitter:description", content: "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati offers expert physiotherapy, pain relief, rehabilitation, and obesity management treatments with per" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d8477c00-193f-4b49-bea2-5ed19801511e/id-preview-e2dfcf4d--71800ba4-6a3d-446e-9ab6-e53753ad10c7.lovable.app-1779866666497.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d8477c00-193f-4b49-bea2-5ed19801511e/id-preview-e2dfcf4d--71800ba4-6a3d-446e-9ab6-e53753ad10c7.lovable.app-1779866666497.png" },
+      { title: `Best Physiotherapy Clinic in ${CLINIC.city} | ${CLINIC.shortName}` },
+      {
+        property: "og:title",
+        content: `Best Physiotherapy Clinic in ${CLINIC.city} | ${CLINIC.shortName}`,
+      },
+      { name: "twitter:title", content: `Best Physiotherapy Clinic in ${CLINIC.city}` },
+      { name: "description", content: DEFAULT_DESCRIPTION },
+      { property: "og:description", content: DEFAULT_DESCRIPTION },
+      { name: "twitter:description", content: DEFAULT_DESCRIPTION },
+      { name: "keywords", content: SEO_KEYWORDS },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      { name: "geo.region", content: "IN-AP" },
+      { name: "geo.placename", content: CLINIC.city },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: `${SITE_URL}${logo}` },
+      { name: "twitter:image", content: `${SITE_URL}${logo}` },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: SITE_URL },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -97,12 +122,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": ["MedicalBusiness", "Physiotherapy"],
           name: CLINIC.name,
-          url: "/",
-          image: "/og-image.jpg",
+          url: SITE_URL,
+          image: `${SITE_URL}${logo}`,
           telephone: CLINIC.phone,
+          email: CLINIC.email,
           priceRange: "₹₹",
           address: {
             "@type": "PostalAddress",
+            streetAddress: CLINIC.address.line,
             addressLocality: CLINIC.city,
             addressRegion: CLINIC.state,
             addressCountry: "IN",
@@ -122,6 +149,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Rehabilitation",
             "Obesity Management",
           ],
+          hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            `${CLINIC.name} ${CLINIC.city}`,
+          )}`,
           areaServed: { "@type": "City", name: CLINIC.city },
           employee: {
             "@type": "Physician",

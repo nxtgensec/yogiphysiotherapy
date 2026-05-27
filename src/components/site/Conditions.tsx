@@ -1,11 +1,34 @@
 import {
-  Activity, Bone, Dumbbell, Footprints, HandHeart, Heart, MoveRight, PersonStanding, Scale, Stethoscope, Zap,
+  Activity,
+  Bone,
+  Dumbbell,
+  Footprints,
+  HandHeart,
+  Heart,
+  MoveRight,
+  PersonStanding,
+  Scale,
+  Stethoscope,
+  Zap,
 } from "lucide-react";
 import { useLang } from "@/i18n/LanguageProvider";
 import { buildWhatsAppLink } from "@/lib/clinic";
 import { useReveal } from "@/hooks/use-reveal";
 
-const ICONS = [Bone, PersonStanding, Footprints, Scale, Dumbbell, Activity, Heart, HandHeart, Stethoscope, Zap, MoveRight, PersonStanding];
+const ICONS = [
+  Bone,
+  PersonStanding,
+  Footprints,
+  Scale,
+  Dumbbell,
+  Activity,
+  Heart,
+  HandHeart,
+  Stethoscope,
+  Zap,
+  MoveRight,
+  PersonStanding,
+];
 
 export function Conditions() {
   const { t } = useLang();
@@ -16,7 +39,9 @@ export function Conditions() {
     <section id="conditions" className="relative py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div ref={ref} className="reveal mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Quick care</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Quick care
+          </span>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             {t.conditions.title}
           </h2>
@@ -30,9 +55,12 @@ export function Conditions() {
             return (
               <a
                 key={k}
-                href={buildWhatsAppLink(label, `I'm experiencing ${label.toLowerCase()} and would like guidance.`)}
+                href={buildWhatsAppLink(
+                  label,
+                  `I'm experiencing ${label.toLowerCase()} and would like guidance.`,
+                )}
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="group relative flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-4 text-center shadow-soft transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-elevated"
               >
                 <span className="grid size-12 place-items-center rounded-2xl bg-gradient-healing text-primary transition-transform group-hover:scale-110">

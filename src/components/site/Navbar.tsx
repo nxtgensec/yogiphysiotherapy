@@ -21,7 +21,18 @@ export function Navbar() {
   const links = [
     { href: "/#conditions", label: t.nav.conditions },
     { href: "/#services", label: t.nav.services },
+    { href: "/#machinery", label: t.nav.equipment },
     { href: "/#doctor", label: t.nav.about },
+    { href: "/#testimonials", label: t.nav.testimonials },
+    { href: "/#faq", label: t.nav.faq },
+    { href: "/#contact", label: t.nav.contact },
+  ];
+
+  const mobileLinks = [
+    { href: "/#top", label: t.nav.home },
+    { href: "/#about-clinic", label: t.nav.about },
+    { href: "/#services", label: t.nav.services },
+    { href: "/#machinery", label: t.nav.equipment },
     { href: "/#testimonials", label: t.nav.testimonials },
     { href: "/#faq", label: t.nav.faq },
     { href: "/#contact", label: t.nav.contact },
@@ -35,13 +46,23 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         <Link to="/" className="flex items-center gap-2.5 min-w-0" aria-label={CLINIC.shortName}>
-          <img src={logo} alt="Yogi Physiotherapy logo" className="h-10 w-10 shrink-0 rounded-xl object-cover shadow-soft sm:h-11 sm:w-11" />
+          <img
+            src={logo}
+            alt="Yogi Physiotherapy logo"
+            className="h-10 w-10 shrink-0 rounded-xl object-cover shadow-soft sm:h-11 sm:w-11"
+            width={44}
+            height={44}
+            decoding="async"
+          />
           <div className="flex min-w-0 flex-col leading-tight">
-            <span className="font-display text-sm font-semibold text-foreground sm:text-base truncate">{CLINIC.shortName}</span>
-            <span className="hidden text-[11px] text-muted-foreground sm:block">Pain Relief · Obesity Care · {CLINIC.city}</span>
+            <span className="font-display text-sm font-semibold text-foreground sm:text-base truncate">
+              {CLINIC.shortName}
+            </span>
+            <span className="hidden text-[11px] text-muted-foreground sm:block">
+              Pain Relief · Obesity Care · {CLINIC.city}
+            </span>
           </div>
         </Link>
-
 
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
@@ -56,11 +77,13 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden items-center rounded-full border border-border bg-card p-0.5 text-xs sm:flex">
+          <div className="flex items-center rounded-full border border-border bg-card p-0.5 text-[11px] sm:text-xs">
             <button
               onClick={() => setLang("en")}
               className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === "en" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+                lang === "en"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
               aria-pressed={lang === "en"}
             >
@@ -69,11 +92,13 @@ export function Navbar() {
             <button
               onClick={() => setLang("te")}
               className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === "te" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+                lang === "te"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
               aria-pressed={lang === "te"}
             >
-              తె
+              TE
             </button>
           </div>
 
@@ -89,8 +114,11 @@ export function Navbar() {
             </a>
           </Button>
 
-          <Button asChild className="hidden bg-[color:var(--whatsapp)] text-white hover:bg-[color:var(--whatsapp)]/90 md:inline-flex">
-            <a href={buildWhatsAppLink()} target="_blank" rel="noopener">
+          <Button
+            asChild
+            className="hidden bg-[color:var(--whatsapp)] text-white hover:bg-[color:var(--whatsapp)]/90 md:inline-flex"
+          >
+            <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="size-4" />
               {t.nav.book}
             </a>
@@ -99,7 +127,7 @@ export function Navbar() {
           <button
             className="rounded-md p-2 lg:hidden"
             onClick={() => setOpen((o) => !o)}
-            aria-label="Toggle menu"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={open}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -110,7 +138,7 @@ export function Navbar() {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
-            {links.map((l) => (
+            {mobileLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -123,26 +151,12 @@ export function Navbar() {
             <a
               href={buildWhatsAppLink()}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[color:var(--whatsapp)] px-4 py-3 text-sm font-semibold text-white"
             >
               <MessageCircle className="size-4" />
               {t.nav.book}
             </a>
-            <div className="mt-2 flex items-center justify-center gap-2 pt-1 text-xs">
-              <button
-                onClick={() => setLang("en")}
-                className={`rounded-full px-3 py-1.5 ${lang === "en" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground"}`}
-              >
-                English
-              </button>
-              <button
-                onClick={() => setLang("te")}
-                className={`rounded-full px-3 py-1.5 ${lang === "te" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground"}`}
-              >
-                తెలుగు
-              </button>
-            </div>
           </nav>
         </div>
       )}
