@@ -12,9 +12,9 @@ export const dictionaries = {
     },
     hero: {
       badge: "Tirupati's Trusted Physiotherapy Clinic",
-      title: "Move Better. Live Pain-Free.",
+      title: "Best Physiotherapy Clinic in Tirupati",
       subtitle:
-        "Expert physiotherapy, pain relief and obesity care in Tirupati — personalized recovery plans guided by Dr. G Yugandhar.",
+        "Move better, live pain-free. Expert physiotherapy, pain relief & obesity care in Tirupati — personalized recovery plans led by Dr. G Yugandhar (D.P.T., B.P.T.).",
       bookCta: "Book Appointment",
       whatsappCta: "WhatsApp Consultation",
       callCta: "Call Now",
