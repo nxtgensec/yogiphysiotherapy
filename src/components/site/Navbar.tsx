@@ -34,13 +34,14 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
-        <Link to="/" className="flex items-center gap-2.5" aria-label={CLINIC.shortName}>
-          <img src={logo} alt="Yogi Physiotherapy logo" className="h-11 w-11 rounded-xl object-cover shadow-soft" />
-          <div className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-base font-semibold text-foreground">{CLINIC.shortName}</span>
-            <span className="text-[11px] text-muted-foreground">Pain Relief · Obesity Care · {CLINIC.city}</span>
+        <Link to="/" className="flex items-center gap-2.5 min-w-0" aria-label={CLINIC.shortName}>
+          <img src={logo} alt="Yogi Physiotherapy logo" className="h-10 w-10 shrink-0 rounded-xl object-cover shadow-soft sm:h-11 sm:w-11" />
+          <div className="flex min-w-0 flex-col leading-tight">
+            <span className="font-display text-sm font-semibold text-foreground sm:text-base truncate">{CLINIC.shortName}</span>
+            <span className="hidden text-[11px] text-muted-foreground sm:block">Pain Relief · Obesity Care · {CLINIC.city}</span>
           </div>
         </Link>
+
 
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (

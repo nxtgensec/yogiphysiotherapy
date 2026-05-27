@@ -10,7 +10,7 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener"
       aria-label={t.floating.label}
-      className="group fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[color:var(--whatsapp)] py-3 pl-4 pr-5 text-sm font-semibold text-white shadow-elevated animate-pulse-ring hover:bg-[color:var(--whatsapp)]/90"
+      className="group fixed bottom-24 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-[color:var(--whatsapp)] py-3 pl-4 pr-5 text-sm font-semibold text-white shadow-elevated animate-pulse-ring hover:bg-[color:var(--whatsapp)]/90 lg:bottom-5 lg:right-5"
     >
       <MessageCircle className="size-5" />
       <span className="hidden sm:inline">{t.floating.label}</span>

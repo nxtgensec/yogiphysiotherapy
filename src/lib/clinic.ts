@@ -28,12 +28,17 @@ export const CLINIC = {
   },
 };
 
-export function buildWhatsAppLink(condition?: string) {
+export function buildWhatsAppLink(condition?: string, painNote?: string) {
   const base = `https://wa.me/${CLINIC.whatsapp}`;
-  const msg = condition
-    ? `Hello Dr. Yugandhar, I would like to book an appointment for ${condition}. Please share available timings.`
-    : `Hello Dr. Yugandhar, I would like to book a physiotherapy consultation. Please share available timings.`;
-  return `${base}?text=${encodeURIComponent(msg)}`;
+  const lines = [
+    `Hello Dr. Yugandhar,`,
+    condition
+      ? `I am looking for help with: *${condition}*.`
+      : `I would like to book a physiotherapy consultation.`,
+    painNote ? `My concern: ${painNote}` : `Please share available timings and next steps.`,
+    `— Sent from yogiphysiotherapy.com`,
+  ];
+  return `${base}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
 export function buildCallLink() {

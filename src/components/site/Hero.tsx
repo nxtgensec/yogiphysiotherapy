@@ -8,7 +8,7 @@ export function Hero() {
   const { t } = useLang();
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+    <section className="relative overflow-hidden pt-24 pb-12 md:pt-36 md:pb-24">
       {/* Background flourishes */}
       <div className="absolute inset-0 -z-10 bg-hero-gradient" aria-hidden />
       <div
@@ -21,18 +21,19 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 md:gap-12 md:px-6 lg:grid-cols-2">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-card/70 px-3 py-1.5 text-xs font-medium text-primary shadow-soft backdrop-blur">
             <Sparkles className="size-3.5" />
             {t.hero.badge}
           </span>
 
-          <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 font-display text-[2rem] font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
             {t.hero.title}
           </h1>
 
-          <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">{t.hero.subtitle}</p>
+          <p className="mt-4 max-w-xl text-base text-muted-foreground sm:text-lg">{t.hero.subtitle}</p>
+
 
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <Button

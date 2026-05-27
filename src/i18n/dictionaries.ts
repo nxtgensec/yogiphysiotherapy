@@ -12,9 +12,9 @@ export const dictionaries = {
     },
     hero: {
       badge: "Tirupati's Trusted Physiotherapy Clinic",
-      title: "Move Better. Live Pain-Free.",
+      title: "Best Physiotherapy Clinic in Tirupati",
       subtitle:
-        "Expert physiotherapy, pain relief and obesity care in Tirupati — personalized recovery plans guided by Dr. G Yugandhar.",
+        "Move better, live pain-free. Expert physiotherapy, pain relief & obesity care in Tirupati — personalized recovery plans led by Dr. G Yugandhar (D.P.T., B.P.T.).",
       bookCta: "Book Appointment",
       whatsappCta: "WhatsApp Consultation",
       callCta: "Call Now",
@@ -141,6 +141,33 @@ export const dictionaries = {
       contact: "Contact",
       rights: "All rights reserved.",
     },
+    aboutClinic: {
+      eyebrow: "About the clinic",
+      title: "Tirupati's premium recovery & pain-relief clinic",
+      body: "Yogi Physiotherapy Pain Relief & Obesity Clinic is a modern recovery center in Tirupati combining hands-on manual therapy, advanced electrotherapy and personalized obesity care. Our mission is simple — get you back to life, pain-free.",
+      stats: [
+        { v: "10+", l: "Years of clinical care" },
+        { v: "5,000+", l: "Patients recovered" },
+        { v: "30+", l: "Conditions treated" },
+        { v: "4.9★", l: "Patient rating" },
+      ],
+    },
+    machinery: {
+      eyebrow: "Equipment",
+      title: "Modern machinery we use to treat patients",
+      subtitle: "Hospital-grade physiotherapy equipment for faster, safer recovery.",
+      items: [
+        { t: "Ultrasound Therapy", d: "Deep-tissue healing for muscle and joint pain." },
+        { t: "TENS / IFT Stimulator", d: "Electrical nerve stimulation for chronic pain relief." },
+        { t: "Shortwave Diathermy", d: "Deep heat therapy for stiffness and inflammation." },
+        { t: "Laser Therapy", d: "Cold laser to accelerate tissue recovery." },
+        { t: "Cervical & Lumbar Traction", d: "Decompression therapy for neck and back pain." },
+        { t: "Wax Bath Therapy", d: "Soothing heat for arthritis and joint stiffness." },
+        { t: "CPM Machine", d: "Continuous passive motion for post-surgery rehab." },
+        { t: "Body Composition Analyzer", d: "Tracks fat, muscle & water for obesity care." },
+      ],
+    },
+    mobileNav: { home: "Home", services: "Services", book: "Book", call: "Call", more: "Menu" },
     lang: { en: "English", te: "తెలుగు" },
   },
   te: {
@@ -156,9 +183,9 @@ export const dictionaries = {
     },
     hero: {
       badge: "తిరుపతి యొక్క నమ్మదగిన ఫిజియోథెరపీ క్లినిక్",
-      title: "మరింత చురుకుగా కదలండి. నొప్పి లేకుండా జీవించండి.",
+      title: "తిరుపతిలో అత్యుత్తమ ఫిజియోథెరపీ క్లినిక్",
       subtitle:
-        "తిరుపతిలో నిపుణుల ఫిజియోథెరపీ, నొప్పి ఉపశమనం మరియు ఊబకాయం చికిత్స — డాక్టర్ G యుగంధర్ గారి వ్యక్తిగత రికవరీ ప్రణాళికలు.",
+        "నొప్పి లేకుండా జీవించండి. తిరుపతిలో నిపుణుల ఫిజియోథెరపీ, నొప్పి ఉపశమనం, ఊబకాయం చికిత్స — డాక్టర్ G యుగంధర్ గారి వ్యక్తిగత రికవరీ ప్రణాళికలు.",
       bookCta: "అపాయింట్‌మెంట్",
       whatsappCta: "WhatsApp సంప్రదింపు",
       callCta: "ఇప్పుడే కాల్ చేయండి",
@@ -285,6 +312,33 @@ export const dictionaries = {
       contact: "సంప్రదించండి",
       rights: "అన్ని హక్కులూ ప్రత్యేకించబడ్డాయి.",
     },
+    aboutClinic: {
+      eyebrow: "మా క్లినిక్ గురించి",
+      title: "తిరుపతిలో ప్రీమియం రికవరీ & నొప్పి ఉపశమన క్లినిక్",
+      body: "యోగి ఫిజియోథెరపీ క్లినిక్ — తిరుపతిలోని ఆధునిక రికవరీ కేంద్రం. మాన్యువల్ థెరపీ, అధునాతన ఎలక్ట్రోథెరపీ మరియు వ్యక్తిగత ఊబకాయం సంరక్షణ ఒకే చోట.",
+      stats: [
+        { v: "10+", l: "సంవత్సరాల అనుభవం" },
+        { v: "5,000+", l: "రోగుల రికవరీ" },
+        { v: "30+", l: "చికిత్స చేసిన సమస్యలు" },
+        { v: "4.9★", l: "రోగుల రేటింగ్" },
+      ],
+    },
+    machinery: {
+      eyebrow: "పరికరాలు",
+      title: "మేము వాడే ఆధునిక చికిత్సా పరికరాలు",
+      subtitle: "త్వరిత, సురక్షిత రికవరీ కోసం హాస్పిటల్-గ్రేడ్ ఫిజియోథెరపీ పరికరాలు.",
+      items: [
+        { t: "అల్ట్రాసౌండ్ థెరపీ", d: "కండరాలు, కీళ్ల నొప్పికి డీప్-టిష్యూ చికిత్స." },
+        { t: "TENS / IFT స్టిమ్యులేటర్", d: "దీర్ఘకాలిక నొప్పికి ఎలక్ట్రికల్ నర్వ్ స్టిమ్యులేషన్." },
+        { t: "షార్ట్‌వేవ్ డయాథర్మీ", d: "గట్టితనం, వాపుకు డీప్ హీట్ థెరపీ." },
+        { t: "లేజర్ థెరపీ", d: "టిష్యూ రికవరీని వేగవంతం చేసే కోల్డ్ లేజర్." },
+        { t: "సర్వైకల్ & లంబార్ ట్రాక్షన్", d: "మెడ, నడుము నొప్పికి డీకంప్రెషన్." },
+        { t: "వ్యాక్స్ బాత్ థెరపీ", d: "ఆర్థరైటిస్‌కు ఉపశమన వేడి." },
+        { t: "CPM మెషీన్", d: "ఆపరేషన్ తర్వాత నిరంతర చలన థెరపీ." },
+        { t: "బాడీ కంపోజిషన్ ఎనలైజర్", d: "ఊబకాయం సంరక్షణ కోసం ట్రాకింగ్." },
+      ],
+    },
+    mobileNav: { home: "హోమ్", services: "సేవలు", book: "బుక్", call: "కాల్", more: "మెనూ" },
     lang: { en: "English", te: "తెలుగు" },
   },
 } as const;
