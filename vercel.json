@@ -1,5 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "bun run build",
-  "installCommand": "bun install"
+  "installCommand": "bun install",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.yogiphysiotherapy.online" }],
+      "destination": "https://yogiphysiotherapy.online/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "yogiphysiotherapy.vercel.app" }],
+      "destination": "https://yogiphysiotherapy.online/:path*",
+      "permanent": true
+    }
+  ]
 }

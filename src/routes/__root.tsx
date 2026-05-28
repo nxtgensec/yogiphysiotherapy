@@ -13,7 +13,7 @@ import logo from "@/assets/logo.png";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { CLINIC } from "@/lib/clinic";
 
-const SITE_URL = "https://yogiphysiotherapy.com";
+const SITE_URL = CLINIC.siteUrl;
 const DEFAULT_DESCRIPTION =
   "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati provides expert physiotherapy, back pain treatment, knee pain care, sports injury rehab, paralysis rehabilitation, home visit physiotherapy and obesity management.";
 const SEO_KEYWORDS =

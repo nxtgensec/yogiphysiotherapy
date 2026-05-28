@@ -19,10 +19,10 @@ export function Navbar() {
   }, []);
 
   const links = [
-    { href: "/#conditions", label: t.nav.conditions },
+    { href: "/#top", label: t.nav.home },
+    { href: "/#about-clinic", label: t.nav.about },
     { href: "/#services", label: t.nav.services },
     { href: "/#machinery", label: t.nav.equipment },
-    { href: "/#doctor", label: t.nav.about },
     { href: "/#testimonials", label: t.nav.testimonials },
     { href: "/#faq", label: t.nav.faq },
     { href: "/#contact", label: t.nav.contact },

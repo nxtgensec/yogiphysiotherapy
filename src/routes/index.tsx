@@ -16,7 +16,7 @@ import { Footer } from "@/components/site/Footer";
 import { MobileBottomNav } from "@/components/site/MobileBottomNav";
 import { CLINIC } from "@/lib/clinic";
 
-const SITE_URL = "https://yogiphysiotherapy.com";
+const SITE_URL = CLINIC.siteUrl;
 const HOME_DESCRIPTION = `Best physiotherapy clinic in ${CLINIC.city} for back pain, neck pain, knee pain, sciatica, sports injury rehabilitation, paralysis rehab, home visit physiotherapy and obesity management. Led by ${CLINIC.doctor.name} (${CLINIC.doctor.credentials}).`;
 
 const FAQ_ITEMS = [

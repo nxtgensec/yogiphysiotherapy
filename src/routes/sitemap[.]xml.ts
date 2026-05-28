@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { CLINIC } from "@/lib/clinic";
 
-const BASE_URL = "https://yogiphysiotherapy.lovable.app";
+const BASE_URL = CLINIC.siteUrl;
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

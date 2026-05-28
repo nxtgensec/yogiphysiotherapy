@@ -4,6 +4,7 @@
   city: "Tirupati",
   state: "Andhra Pradesh",
   country: "India",
+  siteUrl: "https://yogiphysiotherapy.online",
   doctor: {
     name: "Dr. G Yugandhar",
     credentials: "D.P.T., B.P.T.-MIAP",
@@ -31,7 +32,7 @@ export function buildWhatsAppLink(condition?: string, painNote?: string) {
       ? `I am looking for help with: *${condition}*.`
       : `I would like to book a physiotherapy consultation.`,
     painNote ? `My concern: ${painNote}` : `Please share available timings and next steps.`,
-    `  Sent from yogiphysiotherapy.com`,
+    `  Sent from yogiphysiotherapy.online`,
   ];
   return `${base}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
