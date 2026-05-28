@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import * as React from "react";
 
 import appCss from "../styles.css?url";
 import logo from "@/assets/logo.png";
@@ -14,6 +15,8 @@ import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { CLINIC } from "@/lib/clinic";
 
 const SITE_URL = CLINIC.siteUrl;
+const CANONICAL_HOST = new URL(SITE_URL).hostname;
+const REDIRECT_HOSTS = new Set(["www.yogiphysiotherapy.online", "yogiphysiotherapy.vercel.app"]);
 const DEFAULT_DESCRIPTION =
   "Yogi Physiotherapy Pain Relief & Obesity Clinic in Tirupati provides expert physiotherapy, back pain treatment, knee pain care, sports injury rehab, paralysis rehabilitation, home visit physiotherapy and obesity management.";
 const SEO_KEYWORDS =
@@ -189,8 +192,24 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
+        <CanonicalHostRedirect />
         <Outlet />
       </LanguageProvider>
     </QueryClientProvider>
   );
+}
+
+function CanonicalHostRedirect() {
+  React.useEffect(() => {
+    if (!REDIRECT_HOSTS.has(window.location.hostname)) {
+      return;
+    }
+
+    const url = new URL(window.location.href);
+    url.protocol = "https:";
+    url.hostname = CANONICAL_HOST;
+    window.location.replace(url.toString());
+  }, []);
+
+  return null;
 }
