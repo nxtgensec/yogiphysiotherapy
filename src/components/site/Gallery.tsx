@@ -8,18 +8,34 @@ import tractionImage from "@/assets/equipment/traction-therapy.jpg";
 import treatmentTableImage from "@/assets/equipment/treatment-table.jpg";
 import ultrasoundImage from "@/assets/equipment/ultrasound-therapy.jpg";
 import vibrationImage from "@/assets/equipment/vibration-therapy.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
+import clinicConsultationRoom from "@/assets/clinic-consultation-room.jpg";
+import clinicEntrance from "@/assets/clinic-entrance.jpg";
+import clinicTreatmentSuite from "@/assets/clinic-treatment-suite.jpg";
+import clinicWaitingArea from "@/assets/clinic-waiting-area.jpg";
 import { useLang } from "@/i18n/LanguageProvider";
 import { useReveal } from "@/hooks/use-reveal";
 
 const ITEMS = [
-  { src: g1, alt: "Yogi Physiotherapy treatment room", span: "row-span-2" },
-  { src: g3, alt: "Yogi Physiotherapy clinic interior", span: "" },
-  { src: g4, alt: "Guided exercise therapy at Yogi Physiotherapy", span: "row-span-2" },
-  { src: g2, alt: "Physiotherapy treatment setup", span: "" },
+  {
+    src: clinicTreatmentSuite,
+    alt: "Clean Yogi Physiotherapy treatment room with therapy table",
+    label: "Treatment room",
+  },
+  {
+    src: clinicEntrance,
+    alt: "Yogi Physiotherapy clinic entrance in Tirupati",
+    label: "Clinic entrance",
+  },
+  {
+    src: clinicWaitingArea,
+    alt: "Comfortable waiting and therapy area inside Yogi Physiotherapy",
+    label: "Patient waiting area",
+  },
+  {
+    src: clinicConsultationRoom,
+    alt: "Yogi Physiotherapy consultation room with doctor desk",
+    label: "Consultation room",
+  },
 ];
 
 const FEATURE_ICONS = [Activity, ClipboardCheck, HeartPulse];
@@ -52,21 +68,24 @@ export function Gallery() {
           <p className="mt-3 text-muted-foreground">{t.gallery.subtitle}</p>
         </div>
 
-        <div className="mt-12 grid auto-rows-[160px] grid-cols-2 gap-3 sm:auto-rows-[220px] md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {ITEMS.map((it) => (
             <figure
               key={it.alt}
-              className={`relative overflow-hidden rounded-lg shadow-soft ${it.span}`}
+              className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-border bg-card shadow-soft"
             >
               <img
                 src={it.src}
                 alt={it.alt}
                 loading="lazy"
                 decoding="async"
-                className="size-full object-cover"
-                width={1024}
-                height={768}
+                className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                width={800}
+                height={1067}
               />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/70 to-transparent px-3 pb-3 pt-10 text-xs font-semibold text-background sm:text-sm">
+                {it.label}
+              </figcaption>
             </figure>
           ))}
         </div>
