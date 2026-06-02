@@ -8,11 +8,11 @@ export function Hero() {
   const { t } = useLang();
 
   return (
-    <section className="relative min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
+    <section className="relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
       <img
         src={clinicEntrance}
         alt=""
-        className="absolute inset-0 -z-20 size-full object-cover object-[center_42%]"
+        className="absolute inset-0 -z-20 size-full scale-105 object-cover object-[center_42%] blur-[2px] saturate-[0.95]"
         fetchPriority="high"
         decoding="async"
         width={800}
@@ -20,7 +20,7 @@ export function Hero() {
         aria-hidden
       />
       <div
-        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.82)_42%,rgba(255,255,255,0.93)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.76)_42%,rgba(255,255,255,0.9)_100%)]"
         aria-hidden
       />
       <div
