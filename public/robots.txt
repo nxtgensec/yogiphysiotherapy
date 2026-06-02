@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_server/
+Disallow: /__*
 
+Host: yogiphysiotherapy.online
 Sitemap: https://yogiphysiotherapy.online/sitemap.xml

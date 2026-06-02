@@ -1,35 +1,13 @@
-import painImg from "@/assets/service-pain-relief.jpg";
-import obesityImg from "@/assets/service-obesity.jpg";
-import sportsImg from "@/assets/service-sports.jpg";
-import neuroImg from "@/assets/service-neuro.jpg";
-import orthoImg from "@/assets/service-ortho.jpg";
-import homeImg from "@/assets/service-home.jpg";
-import exerciseImg from "@/assets/service-exercise.jpg";
-import postureImg from "@/assets/service-posture.jpg";
-import heroImg from "@/assets/hero.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
+import { Link } from "@tanstack/react-router";
+import { MessageCircle } from "lucide-react";
 import { useLang } from "@/i18n/LanguageProvider";
 import { useReveal } from "@/hooks/use-reveal";
-
-const IMAGES: Record<string, string> = {
-  physio: heroImg,
-  pain: painImg,
-  obesity: obesityImg,
-  sports: sportsImg,
-  neuro: neuroImg,
-  ortho: orthoImg,
-  home: homeImg,
-  joint: gallery4,
-  exercise: exerciseImg,
-  posture: postureImg,
-  rehab: gallery2,
-};
+import { buildWhatsAppLink } from "@/lib/clinic";
+import { SERVICES } from "@/lib/service-data";
 
 export function Services() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
-  const keys = Object.keys(t.services.items) as (keyof typeof t.services.items)[];
 
   return (
     <section id="services" className="relative py-20 md:py-28">
@@ -45,16 +23,23 @@ export function Services() {
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-          {keys.map((k) => {
-            const s = t.services.items[k];
+          {SERVICES.map((service) => {
+            const s = t.services.items[service.key];
+            const whatsappHref = buildWhatsAppLink(s.name, service.whatsappMessage);
             return (
               <article
-                key={k}
+                key={service.key}
                 className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-elevated"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block aspect-[4/3] overflow-hidden"
+                  aria-label={`Chat on WhatsApp about ${s.name}`}
+                >
                   <img
-                    src={IMAGES[k]}
+                    src={service.image}
                     alt={`${s.name} in Tirupati at Yogi Physiotherapy`}
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
@@ -62,7 +47,7 @@ export function Services() {
                     width={1024}
                     height={768}
                   />
-                </div>
+                </a>
                 <div className="flex flex-1 flex-col gap-2 p-3 sm:p-5">
                   <h3 className="font-display text-base font-semibold leading-tight tracking-tight sm:text-xl">
                     {s.name}
@@ -70,6 +55,24 @@ export function Services() {
                   <p className="flex-1 text-xs leading-5 text-muted-foreground sm:text-sm">
                     {s.desc}
                   </p>
+                  <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+                    <a
+                      href={whatsappHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-[color:var(--whatsapp)] px-3 text-xs font-semibold text-white transition-colors hover:bg-[color:var(--whatsapp)]/90 sm:text-sm"
+                    >
+                      <MessageCircle className="size-4" />
+                      WhatsApp
+                    </a>
+                    <Link
+                      to="/services/$serviceSlug"
+                      params={{ serviceSlug: service.slug }}
+                      className="inline-flex min-h-10 items-center justify-center rounded-md border border-input bg-background px-3 text-xs font-semibold text-foreground transition-colors hover:bg-secondary sm:text-sm"
+                    >
+                      Know more
+                    </Link>
+                  </div>
                 </div>
               </article>
             );
