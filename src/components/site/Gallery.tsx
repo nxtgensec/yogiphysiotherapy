@@ -1,8 +1,10 @@
 import { Activity, ClipboardCheck, HeartPulse } from "lucide-react";
+import cpmImage from "@/assets/equipment/cpm-machine.jpg";
+import g15Image from "@/assets/equipment/g15-massager.jpg";
 import iftTensImage from "@/assets/equipment/ift-tens-stimulator.jpg";
+import infraredImage from "@/assets/equipment/infrared-lamp.jpg";
 import laserImage from "@/assets/equipment/laser-therapy.jpg";
 import percussionImage from "@/assets/equipment/percussion-therapy.jpg";
-import shockwaveImage from "@/assets/equipment/shockwave-therapy.jpg";
 import shortwaveImage from "@/assets/equipment/shortwave-diathermy.jpg";
 import tractionImage from "@/assets/equipment/traction-therapy.jpg";
 import treatmentTableImage from "@/assets/equipment/treatment-table.jpg";
@@ -43,10 +45,12 @@ const FEATURE_ICONS = [Activity, ClipboardCheck, HeartPulse];
 const EQUIPMENT_STRIP = [
   { src: iftTensImage, label: "TENS and IFT therapy" },
   { src: ultrasoundImage, label: "Muscle stimulator" },
-  { src: shockwaveImage, label: "G5 Massager (Advanced)" },
+  { src: g15Image, label: "G15 Massager (Advanced)" },
   { src: laserImage, label: "Obesity management" },
   { src: shortwaveImage, label: "Wax therapy" },
   { src: tractionImage, label: "Traction therapy" },
+  { src: cpmImage, label: "CPM machine" },
+  { src: infraredImage, label: "IR therapy" },
   { src: vibrationImage, label: "Foot pulse" },
   { src: percussionImage, label: "Vibrator massager" },
   { src: treatmentTableImage, label: "Treatment table" },

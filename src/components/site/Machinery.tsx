@@ -1,8 +1,10 @@
 import { Activity } from "lucide-react";
+import cpmImage from "@/assets/equipment/cpm-machine.jpg";
+import g15Image from "@/assets/equipment/g15-massager.jpg";
 import iftTensImage from "@/assets/equipment/ift-tens-stimulator.jpg";
+import infraredImage from "@/assets/equipment/infrared-lamp.jpg";
 import laserImage from "@/assets/equipment/laser-therapy.jpg";
 import percussionImage from "@/assets/equipment/percussion-therapy.jpg";
-import shockwaveImage from "@/assets/equipment/shockwave-therapy.jpg";
 import shortwaveImage from "@/assets/equipment/shortwave-diathermy.jpg";
 import tractionImage from "@/assets/equipment/traction-therapy.jpg";
 import treatmentTableImage from "@/assets/equipment/treatment-table.jpg";
@@ -15,10 +17,12 @@ import { buildWhatsAppLink } from "@/lib/clinic";
 const EQUIPMENT_IMAGES = [
   iftTensImage,
   ultrasoundImage,
-  shockwaveImage,
+  g15Image,
   laserImage,
   shortwaveImage,
   tractionImage,
+  cpmImage,
+  infraredImage,
   vibrationImage,
   percussionImage,
   treatmentTableImage,

@@ -1,39 +1,22 @@
 import { Calendar, HeartPulse, Phone, ShieldCheck, Sparkles } from "lucide-react";
-import clinicConsultationRoom from "@/assets/clinic-consultation-room.jpg";
-import clinicEntrance from "@/assets/clinic-entrance.jpg";
-import clinicTreatmentSuite from "@/assets/clinic-treatment-suite.jpg";
-import clinicWaitingArea from "@/assets/clinic-waiting-area.jpg";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageProvider";
 import { buildCallLink, buildWhatsAppLink, CLINIC } from "@/lib/clinic";
 
-const HERO_IMAGES = [
-  { src: clinicEntrance, position: "object-[center_38%]" },
-  { src: clinicTreatmentSuite, position: "object-[center_52%]" },
-  { src: clinicWaitingArea, position: "object-[center_48%]" },
-  { src: clinicConsultationRoom, position: "object-[center_50%]" },
-];
-
 export function Hero() {
   const { t } = useLang();
+  const heroTitle =
+    t.hero.title === "Best Physiotherapy Clinic in Tirupati" ? (
+      <>
+        Best Physiotherapy Clinic{" "}
+        <span className="block whitespace-nowrap">in Tirupati</span>
+      </>
+    ) : (
+      t.hero.title
+    );
 
   return (
-    <section className="relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
-      {HERO_IMAGES.map((image, index) => (
-        <img
-          key={image.src}
-          src={image.src}
-          alt=""
-          className={`animate-hero-slide absolute inset-0 -z-20 size-full object-cover ${image.position} blur-[0.5px] saturate-[1.08]`}
-          style={{ animationDelay: `${index * 6}s` }}
-          fetchPriority={index === 0 ? "high" : undefined}
-          loading={index === 0 ? undefined : "lazy"}
-          decoding="async"
-          width={800}
-          height={1067}
-          aria-hidden
-        />
-      ))}
+    <section className="bg-hero-gradient relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
       <div
         className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.64)_0%,rgba(255,255,255,0.58)_42%,rgba(255,255,255,0.84)_100%)]"
         aria-hidden
@@ -50,7 +33,7 @@ export function Hero() {
         </span>
 
         <h1 className="mx-auto mt-5 max-w-4xl font-display text-[2.35rem] font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-          {t.hero.title}
+          {heroTitle}
         </h1>
 
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">

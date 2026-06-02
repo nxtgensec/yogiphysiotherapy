@@ -282,7 +282,7 @@
         { t: "TENS / IFT Stimulator", d: "Electrical nerve stimulation for chronic pain relief." },
         { t: "Muscle Stimulator", d: "Targeted stimulation for muscle activation and recovery." },
         {
-          t: "G5 Massager (Advanced)",
+          t: "G15 Massager (Advanced)",
           d: "Advanced rhythmic massage support for stubborn muscle tightness and recovery.",
         },
         {
@@ -291,6 +291,14 @@
         },
         { t: "Wax Therapy", d: "Therapeutic heat support for stiffness, pain and joint comfort." },
         { t: "Cervical & Lumbar Traction", d: "Decompression therapy for neck and back pain." },
+        {
+          t: "CPM Machine",
+          d: "Continuous passive motion support for joint mobility and post-surgery recovery.",
+        },
+        {
+          t: "IR Therapy",
+          d: "Infrared heat therapy for soothing stiffness, pain and muscle tightness.",
+        },
         {
           t: "Foot Pulse",
           d: "Foot circulation and comfort support for guided recovery.",
@@ -575,7 +583,7 @@
           d: "మసిల్ యాక్టివేషన్ మరియు రికవరీకి టార్గెటెడ్ స్టిమ్యులేషన్.",
         },
         {
-          t: "G5 మసాజర్ (అడ్వాన్స్‌డ్)",
+          t: "G15 మసాజర్ (అడ్వాన్స్‌డ్)",
           d: "మసిల్ టైట్నెస్ మరియు రికవరీకి అడ్వాన్స్‌డ్ రిథమిక్ మసాజ్ సపోర్ట్.",
         },
         { t: "ఊబకాయం నిర్వహణ", d: "బరువు, చలనశీలత మరియు జీవనశైలి సంరక్షణకు క్లినిక్ గైడెన్స్." },
@@ -584,6 +592,14 @@
           d: "గట్టితనం, నొప్పి మరియు కీళ్ల సౌకర్యం కోసం థెరప్యూటిక్ హీట్ సపోర్ట్.",
         },
         { t: "సర్వైకల్ & లంబార్ ట్రాక్షన్", d: "మెడ, నడుము నొప్పికి డీకంప్రెషన్." },
+        {
+          t: "CPM మెషిన్",
+          d: "కీళ్ల చలనశీలత మరియు ఆపరేషన్ తర్వాత రికవరీకి కంటిన్యూయస్ పాసివ్ మోషన్ సపోర్ట్.",
+        },
+        {
+          t: "IR థెరపీ",
+          d: "గట్టితనం, నొప్పి మరియు మసిల్ టైట్నెస్‌కు ఇన్‌ఫ్రారెడ్ హీట్ థెరపీ.",
+        },
         { t: "ఫుట్ పల్స్", d: "పాదాల సర్క్యులేషన్ మరియు కంఫర్ట్‌కు రికవరీ సపోర్ట్." },
         { t: "వైబ్రేటర్ మసాజర్", d: "టైట్ మసిల్స్ మరియు రికవరీకి టార్గెటెడ్ వైబ్రేషన్ మసాజ్." },
         { t: "ట్రీట్మెంట్ టేబుల్", d: "మాన్యువల్ థెరపీ మరియు చికిత్సల కోసం సౌకర్యవంతమైన సెటప్." },
