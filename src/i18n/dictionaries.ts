@@ -279,8 +279,8 @@
       title: "Modern machinery we use to treat patients",
       subtitle: "Hospital-grade physiotherapy equipment for faster, safer recovery.",
       items: [
-        { t: "Ultrasound Therapy", d: "Deep-tissue healing for muscle and joint pain." },
         { t: "TENS / IFT Stimulator", d: "Electrical nerve stimulation for chronic pain relief." },
+        { t: "Muscle Stimulator", d: "Targeted stimulation for muscle activation and recovery." },
         {
           t: "Shockwave Therapy",
           d: "Focused acoustic pulses for stubborn muscle and tendon pain.",
@@ -563,10 +563,13 @@
       title: "మేము వాడే ఆధునిక చికిత్సా పరికరాలు",
       subtitle: "త్వరిత, సురక్షిత రికవరీ కోసం హాస్పిటల్-గ్రేడ్ ఫిజియోథెరపీ పరికరాలు.",
       items: [
-        { t: "అల్ట్రాసౌండ్ థెరపీ", d: "కండరాలు, కీళ్ల నొప్పికి డీప్-టిష్యూ చికిత్స." },
         {
           t: "TENS / IFT స్టిమ్యులేటర్",
           d: "దీర్ఘకాలిక నొప్పికి ఎలక్ట్రికల్ నర్వ్ స్టిమ్యులేషన్.",
+        },
+        {
+          t: "మసిల్ స్టిమ్యులేటర్",
+          d: "మసిల్ యాక్టివేషన్ మరియు రికవరీకి టార్గెటెడ్ స్టిమ్యులేషన్.",
         },
         { t: "షాక్‌వేవ్ థెరపీ", d: "కండరాలు, టెండన్ నొప్పికి ఫోకస్డ్ అకౌస్టిక్ పల్స్ చికిత్స." },
         { t: "లేజర్ థెరపీ", d: "టిష్యూ రికవరీని వేగవంతం చేసే కోల్డ్ లేజర్." },

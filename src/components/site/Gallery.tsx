@@ -25,8 +25,8 @@ const ITEMS = [
 const FEATURE_ICONS = [Activity, ClipboardCheck, HeartPulse];
 
 const EQUIPMENT_STRIP = [
-  { src: ultrasoundImage, label: "Ultrasound therapy" },
   { src: iftTensImage, label: "TENS and IFT therapy" },
+  { src: ultrasoundImage, label: "Muscle stimulator" },
   { src: shockwaveImage, label: "Shockwave therapy" },
   { src: laserImage, label: "Laser therapy" },
   { src: shortwaveImage, label: "Shortwave diathermy" },

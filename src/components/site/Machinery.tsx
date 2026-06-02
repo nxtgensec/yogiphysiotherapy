@@ -13,8 +13,8 @@ import { useReveal } from "@/hooks/use-reveal";
 import { buildWhatsAppLink } from "@/lib/clinic";
 
 const EQUIPMENT_IMAGES = [
-  ultrasoundImage,
   iftTensImage,
+  ultrasoundImage,
   shockwaveImage,
   laserImage,
   shortwaveImage,
