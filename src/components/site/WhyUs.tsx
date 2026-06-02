@@ -1,4 +1,13 @@
-import { Award, BadgeCheck, Clock, GraduationCap, Heart, Home, MessageCircle, Sparkles } from "lucide-react";
+import {
+  Award,
+  BadgeCheck,
+  Clock,
+  GraduationCap,
+  Heart,
+  Home,
+  MessageCircle,
+  Sparkles,
+} from "lucide-react";
 import { useLang } from "@/i18n/LanguageProvider";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -9,10 +18,15 @@ export function WhyUs() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-[color:var(--healing)]/15 to-background" aria-hidden />
+      <div
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-[color:var(--healing)]/15 to-background"
+        aria-hidden
+      />
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div ref={ref} className="reveal mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Why us</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Why us
+          </span>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             {t.why.title}
           </h2>
