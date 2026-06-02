@@ -1,26 +1,41 @@
 import { Calendar, HeartPulse, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import clinicConsultationRoom from "@/assets/clinic-consultation-room.jpg";
 import clinicEntrance from "@/assets/clinic-entrance.jpg";
+import clinicTreatmentSuite from "@/assets/clinic-treatment-suite.jpg";
+import clinicWaitingArea from "@/assets/clinic-waiting-area.jpg";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageProvider";
 import { buildCallLink, buildWhatsAppLink, CLINIC } from "@/lib/clinic";
+
+const HERO_IMAGES = [
+  { src: clinicEntrance, position: "object-[center_38%]" },
+  { src: clinicTreatmentSuite, position: "object-[center_52%]" },
+  { src: clinicWaitingArea, position: "object-[center_48%]" },
+  { src: clinicConsultationRoom, position: "object-[center_50%]" },
+];
 
 export function Hero() {
   const { t } = useLang();
 
   return (
     <section className="relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
-      <img
-        src={clinicEntrance}
-        alt=""
-        className="absolute inset-0 -z-20 size-full scale-105 object-cover object-[center_42%] blur-[2px] saturate-[0.95]"
-        fetchPriority="high"
-        decoding="async"
-        width={800}
-        height={1067}
-        aria-hidden
-      />
+      {HERO_IMAGES.map((image, index) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt=""
+          className={`animate-hero-slide absolute inset-0 -z-20 size-full object-cover ${image.position} blur-[0.5px] saturate-[1.08]`}
+          style={{ animationDelay: `${index * 6}s` }}
+          fetchPriority={index === 0 ? "high" : undefined}
+          loading={index === 0 ? undefined : "lazy"}
+          decoding="async"
+          width={800}
+          height={1067}
+          aria-hidden
+        />
+      ))}
       <div
-        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.76)_42%,rgba(255,255,255,0.9)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.64)_0%,rgba(255,255,255,0.58)_42%,rgba(255,255,255,0.84)_100%)]"
         aria-hidden
       />
       <div
@@ -69,7 +84,7 @@ export function Hero() {
           </Button>
         </div>
 
-        <dl className="mx-auto mt-10 grid max-w-4xl gap-3 border-y border-border/60 py-5 text-left sm:grid-cols-3">
+        <dl className="mx-auto mt-10 grid max-w-4xl grid-cols-3 gap-2 border-y border-border/60 py-5 text-left sm:gap-3">
           {[
             { icon: ShieldCheck, label: t.hero.trust1 },
             { icon: HeartPulse, label: t.hero.trust2 },
@@ -77,12 +92,14 @@ export function Hero() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex items-center gap-3 rounded-lg bg-card/70 p-3 shadow-soft"
+              className="flex min-w-0 items-center gap-1.5 rounded-lg bg-card/75 p-2 shadow-soft sm:gap-3 sm:p-3"
             >
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[color:var(--healing)]/45 text-primary">
-                <item.icon className="size-4" />
+              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[color:var(--healing)]/45 text-primary sm:size-10">
+                <item.icon className="size-3.5 sm:size-4" />
               </span>
-              <dt className="text-sm font-semibold leading-tight text-foreground">{item.label}</dt>
+              <dt className="truncate whitespace-nowrap text-[11px] font-semibold leading-tight text-foreground sm:text-sm">
+                {item.label}
+              </dt>
             </div>
           ))}
         </dl>

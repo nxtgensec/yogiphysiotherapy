@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Clock, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { Building2, Clock, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -86,8 +86,8 @@ export function Contact() {
               </div>
             </div>
             <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
-              <span className="grid size-12 place-items-center rounded-xl bg-accent/10 text-accent">
-                <MapPin className="size-5" />
+              <span className="grid size-12 place-items-center rounded-xl bg-primary/10 text-primary">
+                <Building2 className="size-5" />
               </span>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

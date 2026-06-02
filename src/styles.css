@@ -260,6 +260,27 @@
     animation: float-slow 8s ease-in-out infinite;
   }
 
+  @keyframes hero-slide {
+    0%,
+    22% {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+    29%,
+    100% {
+      opacity: 0;
+      transform: scale(1.07);
+    }
+  }
+  .animate-hero-slide {
+    opacity: 0;
+    animation: hero-slide 24s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+  .animate-hero-slide:first-of-type {
+    opacity: 1;
+  }
+
   @keyframes marquee-ltr {
     from {
       transform: translateX(-50%);

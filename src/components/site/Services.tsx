@@ -68,7 +68,7 @@ export function Services() {
                     <Link
                       to="/services/$serviceSlug"
                       params={{ serviceSlug: service.slug }}
-                      className="inline-flex min-h-10 items-center justify-center rounded-md border border-input bg-background px-3 text-xs font-semibold text-foreground transition-colors hover:bg-secondary sm:text-sm"
+                      className="inline-flex min-h-10 items-center justify-center rounded-md border border-[color:var(--healing)]/60 bg-[color:var(--healing)]/25 px-3 text-xs font-semibold text-foreground transition-colors hover:bg-[color:var(--healing)]/40 sm:text-sm"
                     >
                       Know more
                     </Link>
