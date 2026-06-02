@@ -47,8 +47,8 @@ const EQUIPMENT_STRIP = [
   { src: laserImage, label: "Obesity management" },
   { src: shortwaveImage, label: "Wax therapy" },
   { src: tractionImage, label: "Traction therapy" },
-  { src: vibrationImage, label: "Vibration therapy" },
-  { src: percussionImage, label: "Percussion therapy" },
+  { src: vibrationImage, label: "Foot pulse" },
+  { src: percussionImage, label: "Vibrator massager" },
   { src: treatmentTableImage, label: "Treatment table" },
 ];
 
