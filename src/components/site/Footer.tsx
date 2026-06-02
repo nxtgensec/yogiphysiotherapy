@@ -10,19 +10,50 @@ import {
 import { useLang } from "@/i18n/LanguageProvider";
 import { CLINIC } from "@/lib/clinic";
 
-const INTERNS = [
-  { name: "T. Sravanthi", id: "NGS-DEV26-TH14", role: "Backend" },
-  { name: "T. Sneha", id: "NGS-DEV26-SN17", role: "Backend" },
-  { name: "GUNALA LAHARI", id: "NGS-DEV26-GU06", role: "Deployment Team" },
-  { name: "K. Keerthana", id: "NGS-DEV26-KK22", role: "Intern" },
-  { name: "M. Siva Tejaswini", id: "NGS-DEV26-MA07", role: "Deployment Team" },
-  { name: "T. Manasa Reddy", id: "NGS-DEV26-TM12", role: "Intern" },
-  { name: "M. Lavanya", id: "NGS-DEV26-ML51", role: "Intern" },
-  { name: "A B KAMAL", id: "NGS-DEV26-AB04", role: "Intern" },
-  { name: "M Kiran Kumar", id: "NGS-DEV26-MK23", role: "Intern" },
-  { name: "Goparam Jashnavi", id: "NGS-DEV26-JG32", role: "Intern" },
-  { name: "Muppireddy Keerthi", id: "NGS-DEV26-MU09", role: "Deployment Team" },
-  { name: "V.md. Fareed", id: "NGS-DEV26-VM11", role: "Intern" },
+const INTERN_TEAMS = [
+  {
+    role: "Backend",
+    members: [
+      { name: "T. Sneha", id: "NGS-DEV26-SN17" },
+      { name: "T. Sravanthi", id: "NGS-DEV26-TH14" },
+    ],
+  },
+  {
+    role: "Deployment Team",
+    members: [
+      { name: "GUNALA LAHARI", id: "NGS-DEV26-GU06" },
+      { name: "M. Siva Tejaswini", id: "NGS-DEV26-MA07" },
+      { name: "Muppireddy Keerthi", id: "NGS-DEV26-MU09" },
+    ],
+  },
+  {
+    role: "Frontend Team",
+    members: [
+      { name: "B. Siva Charan", id: "NGS-DEV26-BA16" },
+      { name: "T. Sai Nithin Reddy", id: "NGS-DEV26-TH15" },
+      { name: "M. Kiran Kumar", id: "NGS-DEV26-MK23" },
+      { name: "A B KAMAL", id: "NGS-DEV26-AB04" },
+    ],
+  },
+  {
+    role: "Database Team",
+    members: [
+      { name: "T. Leelanchana", id: "NGS-DEV26-LT52" },
+      { name: "G. Jashnavi", id: "NGS-DEV26-JG53" },
+    ],
+  },
+  {
+    role: "Design Team",
+    members: [
+      { name: "V.md. Fareed", id: "NGS-DEV26-VM11" },
+      { name: "T. Manasa Reddy", id: "NGS-DEV26-TM12" },
+      { name: "K. Madhukar", id: "NGS-DEV26-KM19" },
+    ],
+  },
+  {
+    role: "Testing",
+    members: [{ name: "G. Ganesh", id: "NGS-DEV26-GA05" }],
+  },
 ];
 
 export function Footer() {
@@ -145,34 +176,38 @@ export function Footer() {
                   Developed by NxtGenSec Interns
                 </button>
               </DialogTrigger>
-              <DialogContent className="max-h-[85vh] max-w-3xl overflow-hidden p-0">
-                <DialogHeader className="border-b border-border px-5 pb-4 pt-5 sm:px-6">
-                  <DialogTitle className="font-display text-2xl">NxtGenSec Interns</DialogTitle>
-                  <DialogDescription>
+              <DialogContent className="max-h-[92dvh] max-w-3xl overflow-hidden p-0">
+                <DialogHeader className="border-b border-border px-4 pb-2.5 pt-4 sm:px-6 sm:pb-4 sm:pt-5">
+                  <DialogTitle className="font-display text-xl sm:text-2xl">
+                    NxtGenSec Interns
+                  </DialogTitle>
+                  <DialogDescription className="text-xs sm:text-sm">
                     Development and deployment contributors for Yogi Physiotherapy website.
                   </DialogDescription>
                 </DialogHeader>
-                <div className="max-h-[62vh] overflow-auto px-5 pb-5 sm:px-6">
-                  <table className="w-full min-w-[560px] border-collapse text-left text-sm">
-                    <thead className="sticky top-0 bg-background">
-                      <tr className="border-b border-border text-xs uppercase tracking-wider text-muted-foreground">
-                        <th className="py-3 pr-4 font-semibold">Name</th>
-                        <th className="py-3 pr-4 font-semibold">Intern ID</th>
-                        <th className="py-3 font-semibold">Role</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {INTERNS.map((intern) => (
-                        <tr key={intern.id} className="border-b border-border/70 last:border-0">
-                          <td className="py-3 pr-4 font-medium text-foreground">{intern.name}</td>
-                          <td className="py-3 pr-4 font-mono text-xs text-muted-foreground">
-                            {intern.id}
-                          </td>
-                          <td className="py-3 text-muted-foreground">{intern.role}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                <div className="grid max-h-[72dvh] grid-cols-2 gap-2 overflow-auto px-3 py-3 sm:max-h-[68vh] sm:grid-cols-3 sm:gap-3 sm:px-6 sm:py-5">
+                  {INTERN_TEAMS.map((team) => (
+                    <section
+                      key={team.role}
+                      className="rounded-lg border border-border bg-background/70 p-2.5 sm:p-3"
+                    >
+                      <h3 className="text-[10px] font-bold uppercase tracking-wider text-primary sm:text-xs">
+                        {team.role}
+                      </h3>
+                      <ul className="mt-1.5 space-y-1.5">
+                        {team.members.map((member) => (
+                          <li key={member.id} className="min-w-0">
+                            <p className="break-words text-[11px] font-semibold leading-tight text-foreground sm:text-sm">
+                              {member.name}
+                            </p>
+                            <p className="font-mono text-[9px] leading-tight text-muted-foreground sm:text-[11px]">
+                              {member.id}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  ))}
                 </div>
               </DialogContent>
             </Dialog>
