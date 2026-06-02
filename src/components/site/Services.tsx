@@ -55,15 +55,15 @@ export function Services() {
                   <p className="flex-1 text-xs leading-5 text-muted-foreground sm:text-sm">
                     {s.desc}
                   </p>
-                  <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+                  <div className="mt-2 grid grid-cols-[2.75rem_1fr] gap-2">
                     <a
                       href={whatsappHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-[color:var(--whatsapp)] px-3 text-xs font-semibold text-white transition-colors hover:bg-[color:var(--whatsapp)]/90 sm:text-sm"
+                      className="inline-flex min-h-10 items-center justify-center rounded-md bg-[color:var(--whatsapp)] text-white transition-colors hover:bg-[color:var(--whatsapp)]/90"
+                      aria-label={`Chat on WhatsApp about ${s.name}`}
                     >
                       <MessageCircle className="size-4" />
-                      WhatsApp
                     </a>
                     <Link
                       to="/services/$serviceSlug"

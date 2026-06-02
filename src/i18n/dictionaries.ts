@@ -19,7 +19,7 @@
       bookCta: "Book Appointment",
       whatsappCta: "WhatsApp Consultation",
       callCta: "Call Now",
-      trust1: "10+ Years Experience",
+      trust1: "20+ Years Experience",
       trust2: "5,000+ Patients Recovered",
       trust3: "Home Visits Available",
     },
@@ -44,7 +44,7 @@
     doctor: {
       eyebrow: "Meet your physiotherapist",
       title: "Recovery, designed around you.",
-      bio: "Dr. G Yugandhar leads Yogi Physiotherapy with a decade of clinical experience treating pain, mobility loss and lifestyle disorders. Every plan is tailored with manual therapy, modern modalities and patient education for results that last.",
+      bio: "Dr. G Yugandhar leads Yogi Physiotherapy with 20+ years of clinical experience treating pain, mobility loss and lifestyle disorders. Every plan is tailored with manual therapy, modern modalities and patient education for results that last.",
       philosophyTitle: "Our Recovery Philosophy",
       points: [
         "Listen first, then assess because no two bodies recover the same way.",
@@ -268,7 +268,7 @@
       title: "Tirupati's premium recovery & pain-relief clinic",
       body: "Yogi Physiotherapy Pain Relief & Obesity Clinic is a modern recovery center in Tirupati combining hands-on manual therapy, advanced electrotherapy and personalized obesity care. Our mission is simple: help you return to daily life with clean, dignified and trusted care.",
       stats: [
-        { v: "10+", l: "Years of clinical care" },
+        { v: "20+", l: "Years of clinical care" },
         { v: "5,000+", l: "Patients recovered" },
         { v: "30+", l: "Conditions treated" },
         { v: "4.9★", l: "Patient rating" },
@@ -282,11 +282,14 @@
         { t: "TENS / IFT Stimulator", d: "Electrical nerve stimulation for chronic pain relief." },
         { t: "Muscle Stimulator", d: "Targeted stimulation for muscle activation and recovery." },
         {
-          t: "Shockwave Therapy",
-          d: "Focused acoustic pulses for stubborn muscle and tendon pain.",
+          t: "G5 Massager (Advanced)",
+          d: "Advanced rhythmic massage support for stubborn muscle tightness and recovery.",
         },
-        { t: "Laser Therapy", d: "Cold laser to accelerate tissue recovery." },
-        { t: "Shortwave Diathermy", d: "Deep heat therapy for stiffness and inflammation." },
+        {
+          t: "Obesity Management",
+          d: "Clinic-guided support for weight, mobility and lifestyle care.",
+        },
+        { t: "Wax Therapy", d: "Therapeutic heat support for stiffness, pain and joint comfort." },
         { t: "Cervical & Lumbar Traction", d: "Decompression therapy for neck and back pain." },
         {
           t: "Vibration Therapy",
@@ -328,7 +331,7 @@
       bookCta: "అపాయింట్‌మెంట్",
       whatsappCta: "WhatsApp సంప్రదింపు",
       callCta: "ఇప్పుడే కాల్ చేయండి",
-      trust1: "10+ సంవత్సరాల అనుభవం",
+      trust1: "20+ సంవత్సరాల అనుభవం",
       trust2: "5,000+ రోగుల రికవరీ",
       trust3: "హోమ్ విజిట్స్ అందుబాటులో",
     },
@@ -353,7 +356,7 @@
     doctor: {
       eyebrow: "మీ ఫిజియోథెరపిస్ట్‌ను కలవండి",
       title: "మీ కోసం రూపొందించిన రికవరీ.",
-      bio: "డాక్టర్ G యుగంధర్ యోగి ఫిజియోథెరపీని ఒక దశాబ్దం పాటు క్లినికల్ అనుభవంతో నడిపిస్తున్నారు. నొప్పి, చలనశీలత, మరియు జీవనశైలి సమస్యలకు వ్యక్తిగత చికిత్స అందిస్తారు.",
+      bio: "డాక్టర్ G యుగంధర్ 20+ సంవత్సరాల క్లినికల్ అనుభవంతో యోగి ఫిజియోథెరపీని నడిపిస్తున్నారు. నొప్పి, చలనశీలత, మరియు జీవనశైలి సమస్యలకు వ్యక్తిగత చికిత్స అందిస్తారు.",
       philosophyTitle: "మా రికవరీ తత్వం",
       points: [
         "మొదట వినండి. ప్రతి శరీరం ఒకేలా రికవర్ కాదు.",
@@ -552,7 +555,7 @@
       title: "తిరుపతిలో ప్రీమియం రికవరీ & నొప్పి ఉపశమన క్లినిక్",
       body: "యోగి ఫిజియోథెరపీ క్లినిక్. తిరుపతిలోని ఆధునిక రికవరీ కేంద్రం. మాన్యువల్ థెరపీ, అధునాతన ఎలక్ట్రోథెరపీ మరియు వ్యక్తిగత ఊబకాయం సంరక్షణ ఒకే చోట.",
       stats: [
-        { v: "10+", l: "సంవత్సరాల అనుభవం" },
+        { v: "20+", l: "సంవత్సరాల అనుభవం" },
         { v: "5,000+", l: "రోగుల రికవరీ" },
         { v: "30+", l: "చికిత్స చేసిన సమస్యలు" },
         { v: "4.9★", l: "రోగుల రేటింగ్" },
@@ -571,9 +574,15 @@
           t: "మసిల్ స్టిమ్యులేటర్",
           d: "మసిల్ యాక్టివేషన్ మరియు రికవరీకి టార్గెటెడ్ స్టిమ్యులేషన్.",
         },
-        { t: "షాక్‌వేవ్ థెరపీ", d: "కండరాలు, టెండన్ నొప్పికి ఫోకస్డ్ అకౌస్టిక్ పల్స్ చికిత్స." },
-        { t: "లేజర్ థెరపీ", d: "టిష్యూ రికవరీని వేగవంతం చేసే కోల్డ్ లేజర్." },
-        { t: "షార్ట్‌వేవ్ డయాథర్మీ", d: "గట్టితనం, వాపుకు డీప్ హీట్ థెరపీ." },
+        {
+          t: "G5 మసాజర్ (అడ్వాన్స్‌డ్)",
+          d: "మసిల్ టైట్నెస్ మరియు రికవరీకి అడ్వాన్స్‌డ్ రిథమిక్ మసాజ్ సపోర్ట్.",
+        },
+        { t: "ఊబకాయం నిర్వహణ", d: "బరువు, చలనశీలత మరియు జీవనశైలి సంరక్షణకు క్లినిక్ గైడెన్స్." },
+        {
+          t: "వాక్స్ థెరపీ",
+          d: "గట్టితనం, నొప్పి మరియు కీళ్ల సౌకర్యం కోసం థెరప్యూటిక్ హీట్ సపోర్ట్.",
+        },
         { t: "సర్వైకల్ & లంబార్ ట్రాక్షన్", d: "మెడ, నడుము నొప్పికి డీకంప్రెషన్." },
         { t: "వైబ్రేషన్ థెరపీ", d: "మసిల్ యాక్టివేషన్ మరియు సర్క్యులేషన్‌కు సహాయపడే రిహాబ్." },
         { t: "పర్కషన్ థెరపీ", d: "టైట్ మసిల్స్ రిలీస్ మరియు రికవరీకి టార్గెటెడ్ థెరపీ." },

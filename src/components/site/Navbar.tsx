@@ -41,11 +41,13 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-soft" : "bg-transparent"
+        scrolled
+          ? "border-b border-border/80 bg-background/95 shadow-soft backdrop-blur-xl"
+          : "border-b border-border/60 bg-background/95 backdrop-blur-xl"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
-        <Link to="/" className="flex items-center gap-2.5 min-w-0" aria-label={CLINIC.shortName}>
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label={CLINIC.shortName}>
           <img
             src={logo}
             alt="Yogi Physiotherapy logo"
@@ -55,11 +57,11 @@ export function Navbar() {
             decoding="async"
           />
           <div className="flex min-w-0 flex-col leading-tight">
-            <span className="font-display text-sm font-semibold text-foreground sm:text-base truncate">
+            <span className="truncate font-display text-sm font-semibold text-foreground sm:text-base">
               {CLINIC.shortName}
             </span>
             <span className="hidden text-[11px] text-muted-foreground sm:block">
-              Pain Relief · Obesity Care · {CLINIC.city}
+              Pain Relief &middot; Obesity Care &middot; {CLINIC.city}
             </span>
           </div>
         </Link>

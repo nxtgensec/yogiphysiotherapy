@@ -1,4 +1,5 @@
 import { Calendar, HeartPulse, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import clinicEntrance from "@/assets/clinic-entrance.jpg";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/i18n/LanguageProvider";
 import { buildCallLink, buildWhatsAppLink, CLINIC } from "@/lib/clinic";
@@ -7,8 +8,25 @@ export function Hero() {
   const { t } = useLang();
 
   return (
-    <section className="relative overflow-hidden px-4 pb-14 pt-24 text-center md:pb-20 md:pt-32">
-      <div className="absolute inset-0 -z-10 bg-hero-gradient" aria-hidden />
+    <section className="relative min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
+      <img
+        src={clinicEntrance}
+        alt=""
+        className="absolute inset-0 -z-20 size-full object-cover object-[center_42%]"
+        fetchPriority="high"
+        decoding="async"
+        width={800}
+        height={1067}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.82)_42%,rgba(255,255,255,0.93)_100%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-x-0 bottom-0 -z-10 h-36 bg-gradient-to-t from-background to-transparent"
+        aria-hidden
+      />
 
       <div className="mx-auto max-w-5xl">
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-card/80 px-3 py-1.5 text-xs font-medium text-primary shadow-soft backdrop-blur">
@@ -70,7 +88,8 @@ export function Hero() {
         </dl>
 
         <p className="mx-auto mt-5 max-w-2xl text-sm font-medium text-muted-foreground">
-          {CLINIC.doctor.name} · {CLINIC.doctor.credentials} · Reg No: {CLINIC.doctor.regNo}
+          {CLINIC.doctor.name} &middot; {CLINIC.doctor.credentials} &middot; Reg No:{" "}
+          {CLINIC.doctor.regNo}
         </p>
       </div>
     </section>

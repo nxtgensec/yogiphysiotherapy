@@ -11,6 +11,7 @@ export function Contact() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
   const [form, setForm] = React.useState({ name: "", phone: "", message: "" });
+  const mapQuery = encodeURIComponent(`${CLINIC.name}, ${CLINIC.address.line}`);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -154,7 +155,7 @@ export function Contact() {
                 {t.contact.mapSubtitle}
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Yogi%20Physiotherapy%20Pain%20Relief%20%26%20Obesity%20Clinic%20Tirupati"
+                href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
@@ -165,7 +166,7 @@ export function Contact() {
             </div>
             <iframe
               title="Yogi Physiotherapy Clinic Location in Tirupati"
-              src="https://www.google.com/maps?q=Yogi%20Physiotherapy%20Pain%20Relief%20%26%20Obesity%20Clinic%20Tirupati&output=embed"
+              src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
               className="h-80 w-full lg:h-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -43,9 +43,9 @@ const FEATURE_ICONS = [Activity, ClipboardCheck, HeartPulse];
 const EQUIPMENT_STRIP = [
   { src: iftTensImage, label: "TENS and IFT therapy" },
   { src: ultrasoundImage, label: "Muscle stimulator" },
-  { src: shockwaveImage, label: "Shockwave therapy" },
-  { src: laserImage, label: "Laser therapy" },
-  { src: shortwaveImage, label: "Shortwave diathermy" },
+  { src: shockwaveImage, label: "G5 Massager (Advanced)" },
+  { src: laserImage, label: "Obesity management" },
+  { src: shortwaveImage, label: "Wax therapy" },
   { src: tractionImage, label: "Traction therapy" },
   { src: vibrationImage, label: "Vibration therapy" },
   { src: percussionImage, label: "Percussion therapy" },
