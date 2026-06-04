@@ -14,6 +14,7 @@ import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { MobileBottomNav } from "@/components/site/MobileBottomNav";
+import { ScrollDownControl } from "@/components/site/ScrollDownControl";
 import { CLINIC } from "@/lib/clinic";
 
 const SITE_URL = CLINIC.siteUrl;
@@ -169,6 +170,7 @@ function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollDownControl />
       <MobileBottomNav />
     </div>
   );
