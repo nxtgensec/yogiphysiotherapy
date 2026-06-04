@@ -7,6 +7,7 @@ const CIRCLE_CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS;
 export function ScrollDownControl() {
   const [visible, setVisible] = React.useState(false);
   const [scrollProgress, setScrollProgress] = React.useState(0);
+  const scrollPercent = Math.round(scrollProgress * 100);
 
   React.useEffect(() => {
     const updateScrollState = () => {
@@ -41,9 +42,7 @@ export function ScrollDownControl() {
     <button
       type="button"
       onClick={scrollToPageEdge}
-      aria-label={`${shouldScrollUp ? "Scroll to top" : "Scroll to bottom"}, ${Math.round(
-        scrollProgress * 100,
-      )} percent viewed`}
+      aria-label={`${shouldScrollUp ? "Scroll to top" : "Scroll to bottom"}, ${scrollPercent} percent viewed`}
       className={[
         "fixed bottom-24 right-3 z-30 flex size-11 items-center justify-center rounded-full",
         "bg-background/90 text-primary shadow-elevated ring-1 ring-primary/15 backdrop-blur-md",
@@ -74,8 +73,11 @@ export function ScrollDownControl() {
           strokeDashoffset={CIRCLE_CIRCUMFERENCE * (1 - scrollProgress)}
         />
       </svg>
-      <span className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground md:size-8">
-        <Icon className="size-4" aria-hidden="true" />
+      <span className="flex size-8 flex-col items-center justify-center rounded-full bg-primary text-primary-foreground md:size-9">
+        <span className="text-[9px] font-bold leading-none tabular-nums md:text-[10px]">
+          {scrollPercent}%
+        </span>
+        <Icon className="mt-0.5 size-3" aria-hidden="true" />
       </span>
     </button>
   );
