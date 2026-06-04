@@ -16,7 +16,7 @@
   whatsappDisplay: "+91 73860 44600",
   email: "yogiphysiotherapy@gmail.com",
   address: {
-    line: "19-8-36, Dasarimstam, near Karumari Amma temple, Dasarimatam, Tirupati, Andhra Pradesh 517501",
+    line: "19-8-12/B, Dasarimattamma, Near Mari Amma Temple, Tirupati - 517 501",
   },
   hours: {
     weekdays: "Mon  to  Sat: 8:00 AM  to  9:00 PM",

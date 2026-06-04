@@ -20,15 +20,15 @@ export function AboutDoctor() {
         className="reveal mx-auto grid max-w-7xl items-center gap-14 px-4 md:px-6 lg:grid-cols-12"
       >
         <div className="relative lg:col-span-5">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-elevated">
+          <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-elevated">
             <img
               src={doctorImg}
               alt={`${CLINIC.doctor.name}, Physiotherapist in ${CLINIC.city}`}
-              className="size-full object-cover object-top"
+              className="size-full object-cover object-center"
               loading="lazy"
               decoding="async"
-              width={1024}
-              height={1280}
+              width={1254}
+              height={1254}
             />
           </div>
           <div className="absolute -bottom-5 left-5 right-5 rounded-2xl border border-border bg-card/95 p-4 shadow-elevated backdrop-blur sm:left-auto sm:right-5 sm:w-72">
