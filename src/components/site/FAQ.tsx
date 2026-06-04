@@ -11,7 +11,7 @@ export function FAQ() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="faq" className="py-20 md:py-28">
+    <section id="faq" className="py-10 md:py-14">
       <div className="mx-auto max-w-4xl px-4 md:px-6">
         <div ref={ref} className="reveal text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">

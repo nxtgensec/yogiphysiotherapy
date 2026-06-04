@@ -36,7 +36,7 @@ export function Conditions() {
   const keys = Object.keys(t.conditions.items) as (keyof typeof t.conditions.items)[];
 
   return (
-    <section id="conditions" className="relative py-20 md:py-28">
+    <section id="conditions" className="relative py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div ref={ref} className="reveal mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">

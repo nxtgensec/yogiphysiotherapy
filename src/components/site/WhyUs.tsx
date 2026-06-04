@@ -17,7 +17,7 @@ export function WhyUs() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden py-10 md:py-14">
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-[color:var(--healing)]/15 to-background"
         aria-hidden

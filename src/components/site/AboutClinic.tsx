@@ -7,7 +7,7 @@ export function AboutClinic() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="about-clinic" className="relative py-16 md:py-24">
+    <section id="about-clinic" className="relative py-8 md:py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div ref={ref} className="reveal grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">

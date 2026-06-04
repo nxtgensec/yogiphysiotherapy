@@ -10,7 +10,7 @@ export function AboutDoctor() {
   const ref = useReveal<HTMLDivElement>();
 
   return (
-    <section id="doctor" className="relative overflow-hidden py-20 md:py-28">
+    <section id="doctor" className="relative overflow-hidden py-10 md:py-14">
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/40 to-background"
         aria-hidden

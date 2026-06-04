@@ -32,7 +32,7 @@ export function Machinery() {
   const { t } = useLang();
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="machinery" className="relative overflow-hidden py-16 md:py-24">
+    <section id="machinery" className="relative overflow-hidden py-8 md:py-12">
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/40 to-background"
         aria-hidden

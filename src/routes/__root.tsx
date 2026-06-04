@@ -15,6 +15,7 @@ import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { CLINIC } from "@/lib/clinic";
 
 const SITE_URL = CLINIC.siteUrl;
+const GA_MEASUREMENT_ID = "G-SY7QMDVRTW";
 const CANONICAL_HOST = new URL(SITE_URL).hostname;
 const REDIRECT_HOSTS = new Set(["www.yogiphysiotherapy.online", "yogiphysiotherapy.vercel.app"]);
 const DEFAULT_DESCRIPTION =
@@ -119,6 +120,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`,
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `,
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

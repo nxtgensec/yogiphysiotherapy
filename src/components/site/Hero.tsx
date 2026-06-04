@@ -8,15 +8,21 @@ export function Hero() {
   const heroTitle =
     t.hero.title === "Best Physiotherapy Clinic in Tirupati" ? (
       <>
-        Best Physiotherapy Clinic{" "}
-        <span className="block whitespace-nowrap">in Tirupati</span>
+        <span className="block sm:hidden" aria-hidden="true">
+          <span className="block whitespace-nowrap">Best Physiotherapy</span>
+          <span className="block whitespace-nowrap">Clinic in Tirupati</span>
+        </span>
+        <span className="hidden sm:block" aria-hidden="true">
+          Best Physiotherapy Clinic{" "}
+          <span className="block whitespace-nowrap">in Tirupati</span>
+        </span>
       </>
     ) : (
       t.hero.title
     );
 
   return (
-    <section className="bg-hero-gradient relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-14 pt-28 text-center md:min-h-[760px] md:pb-20 md:pt-36">
+    <section className="bg-hero-gradient relative isolate min-h-[calc(100svh-1rem)] overflow-hidden px-4 pb-7 pt-28 text-center md:min-h-[760px] md:pb-10 md:pt-36">
       <div
         className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.64)_0%,rgba(255,255,255,0.58)_42%,rgba(255,255,255,0.84)_100%)]"
         aria-hidden
@@ -32,7 +38,10 @@ export function Hero() {
           {t.hero.badge}
         </span>
 
-        <h1 className="mx-auto mt-5 max-w-4xl font-display text-[2.35rem] font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+        <h1
+          className="mx-auto mt-5 max-w-4xl font-display text-[2.15rem] font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl"
+          aria-label={t.hero.title}
+        >
           {heroTitle}
         </h1>
 
