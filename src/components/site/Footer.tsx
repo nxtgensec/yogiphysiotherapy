@@ -12,22 +12,14 @@ import { CLINIC } from "@/lib/clinic";
 
 const INTERN_TEAMS = [
   {
-    role: "Backend",
+    role: "Backend Development",
     members: [
       { name: "T. Sneha", id: "NGS-DEV26-SN17" },
       { name: "T. Sravanthi", id: "NGS-DEV26-TH14" },
     ],
   },
   {
-    role: "Deployment Team",
-    members: [
-      { name: "GUNALA LAHARI", id: "NGS-DEV26-GU06" },
-      { name: "M. Siva Tejaswini", id: "NGS-DEV26-MA07" },
-      { name: "Muppireddy Keerthi", id: "NGS-DEV26-MU09" },
-    ],
-  },
-  {
-    role: "Frontend Team",
+    role: "Frontend Development",
     members: [
       { name: "B. Siva Charan", id: "NGS-DEV26-BA16" },
       { name: "T. Sai Nithin Reddy", id: "NGS-DEV26-TH15" },
@@ -36,23 +28,37 @@ const INTERN_TEAMS = [
     ],
   },
   {
-    role: "Database Team",
+    role: "Deployment & DevOps",
+    members: [
+      { name: "GUNALA LAHARI", id: "NGS-DEV26-GU06" },
+      { name: "M. Siva Tejaswini", id: "NGS-DEV26-MA07" },
+      { name: "Muppireddy Keerthi", id: "NGS-DEV26-MU09" },
+    ],
+  },
+  {
+    role: "Database & Infrastructure",
+    members: [
+      { name: "Janith Sai", id: "NGS-DEV26-KO42" },
+      { name: "Geetha", id: "NGS-DEV26-KG38" },
+      { name: "Scandan", id: "NGS-DEV26-NA10" },
+    ],
+  },
+  {
+    role: "Design & UX",
     members: [
       { name: "T. Leelanchana", id: "NGS-DEV26-LT52" },
       { name: "G. Jashnavi", id: "NGS-DEV26-JG53" },
     ],
   },
   {
-    role: "Design Team",
+    role: "Quality Assurance & Testing",
     members: [
+      { name: "K. Keerthana", id: "NGS-DEV26-KK22" },
+      { name: "M Lavanya", id: "NGS-DEV26-ML51" },
       { name: "V.md. Fareed", id: "NGS-DEV26-VM11" },
       { name: "T. Manasa Reddy", id: "NGS-DEV26-TM12" },
       { name: "K. Madhukar", id: "NGS-DEV26-KM19" },
     ],
-  },
-  {
-    role: "Testing",
-    members: [{ name: "G. Ganesh", id: "NGS-DEV26-GA05" }],
   },
 ];
 
