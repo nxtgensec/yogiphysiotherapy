@@ -721,15 +721,29 @@ Last Updated: 17 June 2026
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgments & Development Team
 
-**Special Thanks To:**
+### 🔬 Testing Team (QA & Validation)
+- **K. Keerthana** - NGS-DEV26-KK22
+- **M Lavanya** - NGS-DEV26-ML51
+- **V.md. Fareed** - NGS-DEV26-VM11
+- **T. Manasa Reddy** - NGS-DEV26-TM12
+- **K. Madhukar** - NGS-DEV26-KM19
 
-- **Dr. G Yugandhar** - Medical expertise & clinic guidance
-- **NGS Development Team** - Architecture & development
-- **Testing & QA Team** - Quality assurance & validation
-- **Design Team** - User experience & visual design
-- **Database Team** - Data infrastructure & optimization
+### 🎨 Design Team (UI/UX)
+- **T. Leelanchana** - NGS-DEV26-LT52
+- **G. Jashnavi** - NGS-DEV26-JG53
+
+### 💾 Database Team (Infrastructure & Optimization)
+- **Janith Sai** - NGS-DEV26-KO42
+- **Geetha** - NGS-DEV26-KG38
+- **Scandan** - NGS-DEV26-NA10
+
+### 👨‍⚕️ Medical Consultant
+- **Dr. G Yugandhar** - D.P.T., B.P.T.-MIAP (Reg: LA-39306) - Medical expertise & clinic guidance
+
+### 🌟 Special Recognition
+Developed by **NGS Development** interns with dedication to building a world-class digital presence for Yogi Physiotherapy. This project exemplifies collaborative development, quality assurance, and design excellence.
 
 ---
 
